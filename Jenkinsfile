@@ -9,7 +9,7 @@ pipeline{
     stages{
         stage('checkout'){
             steps{
-                git url: '',
+                git url: 'https://github.com/Naresh1770/fullstack-cicd-app.git',
                     branch: 'main'
             }
         }
