@@ -23,7 +23,7 @@ pipeline{
                 }
                 stage('Build Frontend'){
                     steps{
-                        sh 'docker build -t naresh1770/forntend:v2 ./frontend'
+                        sh 'docker build -t naresh1770/frontend:v2 ./frontend'
                     }
                 }
             }
