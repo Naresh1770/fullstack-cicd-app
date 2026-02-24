@@ -14,7 +14,8 @@ pipeline{
             }
         }
         stage('Build Images (Parallel)'){
-            Parallel{
+            parallel{
+
                 stage('Build Backend'){
                     steps{
                     sh 'docker build -t naresh1770/backend:v2 ./backend'
@@ -40,6 +41,7 @@ pipeline{
         }
         stage('Image Push (parallel)'){
             parallel{
+
                 stage('Backend Image Push'){
                     steps{
                         sh 'docker push naresh1770/backend:v2'
